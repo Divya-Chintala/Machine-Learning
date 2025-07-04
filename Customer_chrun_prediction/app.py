@@ -5,10 +5,10 @@ import joblib
 import pickle
 
 
-with open('preprocessor.pkl', 'rb') as f:
+with open('Customer_chrun_prediction/preprocessor.pkl', 'rb') as f:
     preprocessor = pickle.load(f)
 
-model = joblib.load("RandomForestClassifier_best.pkl")
+model = joblib.load("Customer_chrun_prediction/RandomForestClassifier_best.pkl")
 
 st.title("Customer Churn Prediction")
 
@@ -22,7 +22,7 @@ delay = st.number_input("Payment Delay (in days)", min_value=0, max_value=60, va
 
 subscription = st.selectbox("Subscription Type", ["Basic", "Standard", "Premium"])
 
-contract_length = st.selectbox("Contract Length", ["Monthly", "Quarterly" "Annual"])
+contract_length = st.selectbox("Contract Length", ["Monthly", "Quarterly", "Annual"])
 spend = st.number_input("Total Spend ($)", min_value=0.0, max_value=1000.0, value=100.0)
 
 interaction = st.number_input("Days Since Last Interaction", min_value=0, max_value=365, value=10)
