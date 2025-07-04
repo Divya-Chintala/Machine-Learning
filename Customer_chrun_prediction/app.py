@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import joblib,pickle
+import joblib
+import pickle
 
 
 with open('preprocessor.pkl', 'rb') as f:
