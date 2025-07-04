@@ -7,7 +7,7 @@ import joblib,pickle
 with open('preprocessor.pkl', 'rb') as f:
     preprocessor = pickle.load(f)
 
-model = joblib.load("RandomForestClassifier_best_compressed.pkl")
+model = joblib.load("RandomForestClassifier_best.pkl")
 
 st.title("Customer Churn Prediction")
 
